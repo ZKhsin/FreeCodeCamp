@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background: url(./img/ONE_PIECE.jpg) no-repeat center center / cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Chelsea Market", cursive;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+#title {
+  margin: 0 0 30px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+#img-div {
+  width: 100%;
+}
+
+#img-div img {
+  display: block;
+  margin: auto;
+  max-width: 50%;
+}
+
+#img-caption p {
+  position: relative;
+  font-size: 20px;
+  margin: 25px 0 0;
+}
+
+#img-caption P:last-child {
+  margin: 0 0 50px;
+}
+
+#tribute-info .info {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.info li.saga {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 15px 5px;
+  color: #000;
+  font-size: 20px;
+  font-family: "Piedra", cursive;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.info .saga::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #0984e3 30%, #00f 80%);
+  width: 350px;
+  height: 55px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
+}
+
+.info li.saga:first-child {
+  margin-right: 50px;
+}
+
+.info .saga li {
+  color: #fff;
+  font-size: 16px;
+  padding-top: 10px;
+  letter-spacing: 2px;
+}
+
+.info .saga li:first-child {
+  padding-top: 30px;
+}
+
+#tribute-info #tribute-link {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  body {
+    display: block;
+  }
+
+  #title {
+    padding-top: 50px;
+  }
+
+  #img-div img {
+    max-width: 70%;
+  }
+
+  #img-caption p {
+    font-size: 16px;
+  }
+
+  #img-caption P:last-child {
+    text-align: center;
+  }
+
+  #tribute-info .info {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .info li.saga:first-child {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  #tribute-info #tribute-link {
+    left: 0;
+  }
+}
