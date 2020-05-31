@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Situation Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 id="title">Sleep Situation Survey Form</h1>
+  <p id="description">This survey form is used to record people's sleep status <span>Thank you for helping fill out
+      the form</span></p>
+  <form action="#" id="survey-form">
+    <div class="basic-info">
+      <div class="info">
+        <div>
+          <label for="name" id="name-label">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+          <label for="email" id="email-label">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+      <div class="info">
+        <div>
+          <label for="number" id="number-label">Age</label>
+          <input type="number" name="age" min="0" max="100" id="number" placeholder="Enter your age">
+        </div>
+        <div>
+          <p>Gender</p>
+          <div class="gender">
+            <label for="male"><input name="gender" value="male" type="radio" id="male" class="input-radio"
+                checked>Male</label>
+            <label for="female"><input name="gender" value="female" type="radio" id="female"
+                class="input-radio">Female</label>
+            <label for="other"><input name="gender" value="other" type="radio" id="other"
+                class="input-radio">Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sleep-situation">
+      <div>
+        <p>How long do you sleep at night?</p>
+        <select name="sleep-time" id="dropdown">
+          <option disabled selected value>Select your sleelp time</option>
+          <option value="less-four">Less than 4 hours</option>
+          <option value="four-to-five">4 - 5 hours</option>
+          <option value="six-to-seven">6 - 7 hours</option>
+          <option value="eight-to-nine">8 - 9 hours</option>
+          <option value="more-nine">More than 9 hours</option>
+        </select>
+      </div>
+      <div>
+        <p>How long does it take you to fall asleep?</p>
+        <select name="fall-asleep">
+          <option disabled selected value>Select fall ssleelp time</option>
+          <option value="fifteen">0 - 15 mins</option>
+          <option value="thirty">16 - 30 mins</option>
+          <option value="forty-four">31 - 45 mins</option>
+          <option value="sixty">46 - 60 mins</option>
+          <option value="more">More than 60 mins</option>
+        </select>
+      </div>
+      <div>
+        <p>How would you rate your sleep quality?</p>
+        <div class="sleep-quality">
+          <label for="very-good"><input type="radio" name="quality" value="very-good" id="very-good"
+              class="input-radio">Very good</label>
+          <label for="good"><input type="radio" name="quality" value="good" id="good" class="input-radio">Good</label>
+          <label for="average"><input type="radio" name="quality" value="average" id="average"
+              class="input-radio">Average</label>
+        </div>
+        <div class="sleep-quality">
+          <label for="poor"><input type="radio" name="quality" value="poor" id="poor" class="input-radio">Poor</label>
+          <label for="very-poor"><input type="radio" name="quality" value="very-poor" id="very-poor"
+              class="input-radio">Very poor</label>
+        </div>
+      </div>
+      <div>
+        <p>What kind of sleep problems do you have?</p>
+        <div class="sleep-problem">
+          <div class="problems">
+            <label for="insomnia"><input type="checkbox" name="sleep-problem" value="insomnia" id="insomnia"
+                class="input-checkbox">Insomnia</label>
+            <label for="sleep-deprivation"><input type="checkbox" name="sleep-problem" value="sleep-deprivtion"
+                id="sleep-deprivation" class="input-checkbox">Sleep
+              deprivation</label>
+            <label for="sleep-disorder"><input type="checkbox" name="sleep-problem" value="sleep-disorder"
+                id="sleep-disorder" class="input-checkbox">Sleep
+              disorder</label>
+            <label for="jet-lag"><input type="checkbox" name="sleep-problem" value="jet-lag" id="jet-lag"
+                class="input-checkbox">Jet lag</label>
+            <label for="night-terrors"><input type="checkbox" name="sleep-problem" value="night-terrors"
+                id="night-terrors" class="input-checkbox">Night terrors</label>
+          </div>
+          <div class="problems">
+            <label for="teeth-grinding"><input type="checkbox" name="sleep-problem" value="teeht-grinding"
+                id="teeth-grinding" class="input-checkbox">Teeth
+              grinding</label>
+            <label for="nightmare"><input type="checkbox" name="sleep-problem" value="nightmare" id="nightmare"
+                class="input-checkbox">Nightmare</label>
+            <label for="sleepwalking"><input type="checkbox" name="sleep-problem" value="sleepwalking" id="sleepwalking"
+                class="input-checkbox">Sleepwalking</label>
+            <label for="none"><input type="checkbox" name="sleep-problem" value="sleep-problem" id="none"
+                class="input-checkbox">None</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="textarea">
+      <p>Anything you want to tell or share to us?</p>
+      <textarea id="tell" placeholder="Enter anything you want to tell us"></textarea>
+    </div>
+    <div>
+      <button type="submit" id="submit">Submit</button>
+    </div>
+  </form>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
