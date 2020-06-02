@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Canteen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="header">
+    <img src="./img/logo.png" alt="logo" id="header-img">
+    <input type="checkbox" name="check" id="check">
+    <label for="check" class="show"><i class="fas fa-bars"></i></label>
+    <nav id="nav-bar">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#plans" class="nav-link">Plan</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <label for="check" class="close"><i class="fas fa-times"></i></label>
+    </nav>
+  </header>
+  <div class="video-box">
+    <video src="./img/video.mp4" id="video" muted="true" autoplay loop></video>
+    <p class="slogan">Simple + Moderate + Balanced <span>Healthy</span></p>
+  </div>
+  <div id="about">
+    <div class="img-box">
+      <img src="./img/img-box.jpg" alt="img-box">
+    </div>
+    <div class="text-box">
+      <h2>About Light Canteen</h2>
+      <p>Chef-designed lunch box include three low one high principle(low sugar low fat
+        low salinity,high fiber) balanced meals.</p>
+      <p>Provide you with healthy and comfortable every day</p>
+    </div>
+  </div>
+  <div id="plans">
+    <h2>Choose your lovely meal plan</h2>
+    <div class="plan-box">
+      <div class="plan">
+        <h3>Protein</h3>
+        <i class="fas fa-drumstick-bite"></i>
+        <p>This plan will completely remove any carbohydrates.</p>
+      </div>
+      <div class="plan">
+        <h3>Balance</h3>
+        <i class="fas fa-balance-scale"></i>
+        <p>This plan will completely provide daily meals balance.</p>
+      </div>
+      <div class="plan">
+        <h3>Vegetarian</h3>
+        <i class="fas fa-carrot"></i>
+        <p>This plan will completely remove any meat.</p>
+      </div>
+    </div>
+  </div>
+  <form action="#" class="subscribe" id="form">
+    <p>Subscribe us for news, recipes & more</p>
+    <div class="email-input">
+      <label for="email"></label>
+      <input type="email" name="email" id="email" placeholder="Enter your email">
+      <input type="submit" id="submit" value="Subscribe">
+    </div>
+  </form>
+  <footer id="contact">
+    <div class="footer-nav">
+      <a href="#video">Home</a>
+      <a href="#about">About</a>
+      <a href="#plans">Plan</a>
+    </div>
+    <div class="contact-info">
+      <p>contact@light-canteen.com</p>
+      <p>(000)000-0000</p>
+      <p>&copy;Light Canteen,2020</p>
+    </div>
+    <div class="social-media">
+      <div>
+        <p>Follow us</p>
+      </div>
+      <div class="icons">
+        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="icon"><i class="fab fa-twitter"></i></div>
+        <div class="icon"><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>

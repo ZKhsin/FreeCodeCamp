@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  z-index: 10;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.9);
+}
+
+header #header-img {
+  padding-left: 30px;
+  width: 200px;
+}
+
+header #nav-bar .nav-link {
+  color: #05c464;
+  padding-right: 30px;
+}
+
+header #nav-bar .nav-link:hover,
+header i:hover {
+  color: #019149;
+}
+
+header i {
+  color: #05c464;
+}
+
+header .show {
+  position: absolute;
+  right: 5%;
+}
+
+header .show,
+header .close {
+  transition: 0.5s;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.video-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-box::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-box video {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.video-box .slogan {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 3em;
+  color: #000;
+  mix-blend-mode: overlay;
+  font-weight: 700;
+}
+
+.video-box .slogan span {
+  color: #fff;
+  display: block;
+  font-size: 3em;
+}
+
+#about {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+#about .img-box {
+  flex: 1;
+}
+
+#about .img-box img {
+  width: 100%;
+}
+
+#about .text-box {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .text-box h2 {
+  font-size: 3rem;
+  padding: 0 0 30px;
+}
+
+#about .text-box p {
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 0 50px;
+}
+
+#about .text-box p:nth-of-type(1) {
+  padding-bottom: 30px;
+}
+
+#plans {
+  position: relative;
+  width: 100%;
+  background: url(./img/plan.jpg) no-repeat center center / cover;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 90px 0 50px;
+}
+
+#plans::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#plans h2 {
+  color: #fff;
+  z-index: 2;
+  font-size: 3rem;
+  padding-bottom: 30px;
+}
+
+#plans .plan-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#plans .plan-box .plan {
+  width: 30%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  border: 2px solid #07a054;
+  z-index: 2;
+}
+
+#plans .plan-box .plan:hover {
+  background: #fff;
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+#plans .plan-box .plan h3 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+#plans .plan-box .plan i {
+  font-size: 6rem;
+}
+
+#plans .plan-box .plan p {
+  font-size: 1.3rem;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#form {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #05c464;
+  color: #fff;
+}
+
+#form p {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+#form .email-input {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+#form .email-input #email {
+  width: 250px;
+  font-size: 16px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#form #submit {
+  font-size: 16px;
+  color: #fff;
+  background: #05572e;
+  border: none;
+  padding: 0 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#contact {
+  width: 100%;
+  padding: 30px 0;
+  background: #068545;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+#contact .footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .footer-nav a {
+  color: #fff;
+}
+
+#contact .footer-nav a:not(:last-child),
+#contact .contact-info p:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+#contact .social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .social-media .icons {
+  display: flex;
+  padding-top: 10px;
+}
+
+#contact .social-media .icons .icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+#contact .social-media .icons .icon:not(:last-child) {
+  margin-right: 5px;
+}
+
+@media (max-width: 750px) {
+  .video-box .slogan,
+  .video-box .slogan span {
+    font-size: 2em;
+  }
+
+  #about .img-box {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #about .text-box {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px 0;
+  }
+
+  #about .text-box h2,
+  #plans h2 {
+    font-size: 2rem;
+  }
+
+  #about .text-box p {
+    font-size: 1rem;
+  }
+
+  #plans {
+    display: block;
+    background: #e0faed;
+  }
+
+  #plans::after {
+    background: none;
+  }
+
+  #plans h2 {
+    color: #000;
+  }
+
+  #plans .plan-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #plans .plan-box .plan {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  header .show,
+  header .close {
+    display: block;
+  }
+
+  header #nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    background: #fff;
+    font-size: 28px;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+  }
+
+  header #nav-bar .nav-link {
+    padding: 0;
+  }
+
+  header .close {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+
+  #check:checked ~ #nav-bar {
+    right: 0;
+  }
+
+  .video-box .slogan,
+  .video-box .slogan span {
+    font-size: 1.3em;
+  }
+
+  #plans h2 {
+    padding: 0 10px 30px;
+  }
+  #plans .plan-box .plan {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  #form p {
+    font-size: 1.3rem;
+  }
+
+  #contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact .footer-nav,
+  #contact .contact-info {
+    margin-bottom: 30px;
+  }
+
+  #contact .footer-nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
