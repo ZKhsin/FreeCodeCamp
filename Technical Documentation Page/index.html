@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript HTML DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>JavaScript HTML DOM</h1>
+    </header>
+    <ul>
+      <li><a href="#DOM_Intro" class="nav-link">DOM Intro</a></li>
+      <li><a href="#Methods" class="nav-link">Methods</a></li>
+      <li><a href="#Document" class="nav-link">Document</a></li>
+      <li><a href="#Elements" class="nav-link">Elements</a></li>
+      <li><a href="#HTML" class="nav-link">HTML</a></li>
+      <li><a href="#CSS" class="nav-link">CSS</a></li>
+      <li><a href="#Animations" class="nav-link">Animations</a></li>
+      <li><a href="#Events" class="nav-link">Events</a></li>
+      <li><a href="#Event_Listener" class="nav-link">Event Listener</a></li>
+      <li><a href="#Navigation" class="nav-link">Navigation</a></li>
+      <li><a href="#Nodes" class="nav-link">Nodes</a></li>
+      <li><a href="#Collections" class="nav-link">Collections</a></li>
+      <li><a href="#Node_Lists" class="nav-link">Node Lists</a></li>
+      <li><a href="#References" class="nav-link">References</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="DOM_Intro">
+      <header>
+        <h1>DOM Intro</h1>
+      </header>
+      <div class="content">
+        <h2>The HTML DOM (Document Object Model)</h2>
+        <p>With the HTML DOM, JavaScript can access and change all the elements of an HTML document.</p>
+        <p>When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+        <div class="img-box">
+          <p>The HTML DOM Tree of Objects</p>
+          <img src="./dom_tree.gif" alt="dom_tree">
+        </div>
+        <div class="list">
+          <p>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</p>
+          <ul>
+            <li>JavaScript can change all the HTML elements in the page</li>
+            <li>JavaScript can change all the HTML attributes in the page</li>
+            <li>JavaScript can change all the CSS styles in the page</li>
+            <li>JavaScript can remove existing HTML elements and attributes</li>
+            <li>JavaScript can add new HTML elements and attributes</li>
+            <li>JavaScript can react to all existing HTML events in the page</li>
+            <li>JavaScript can create new HTML events in the page</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Methods">
+      <header>
+        <h1>Methods</h1>
+      </header>
+      <div class="content">
+        <h2>The DOM Programming Interface</h2>
+        <p>The HTML DOM can be accessed with JavaScript (and with other programming languages).</p>
+        <p>In the DOM, all HTML elements are defined as objects.</p>
+        <p>The programming interface is the properties and methods of each object.</p>
+        <p>A property is a value that you can get or set (like changing the content of an HTML element).</p>
+        <p>A method is an action you can do (like add or deleting an HTML element).</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>The following example changes the content (the <code class="code-span">innerHTML</code> ) of the <code
+              class="code-span">&lt;p&gt;</code> element with
+            <code class="code-span">id="demo"</code>:
+          </p>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;p id="demo"&gt;&lt;/p&gt;
+            
+                &lt;script&gt;
+                    document.getElementById("demo").innerHTML = "Hello World!";
+                &lt;/script&gt;
+          
+              &lt;/body&gt;            
+            &lt;/html&gt;
+          </code>
+          <p>In the example above,<code class="code-span">getElementById</code> is a method, while <code
+              class="code-span">innerHTML</code> is a property.</p>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Document">
+      <header>
+        <h1>Document</h1>
+      </header>
+      <div class="content">
+        <h2>The HTML DOM Document Object</h2>
+        <p>The document object represents your web page.</p>
+        <p>If you want to access any element in an HTML page, you always start with accessing the document object.</p>
+        <p>Below are some examples of how you can use the document object to access and manipulate HTML</p>
+        <div class="table-box">
+          <h3>Finding HTML Elements</h3>
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>document.getElementById(id)</td>
+              <td>Find an element by element id</td>
+            </tr>
+            <tr>
+              <td>document.getElementsByTagName(name)</td>
+              <td>Find elements by tag name</td>
+            </tr>
+            <tr>
+              <td>document.getElementsByClassName(name)</td>
+              <td>Find elements by class name</td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-box">
+          <h2>Changing HTML Elements</h2>
+          <table>
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>element.innerHTML = new html content</td>
+              <td>Change the inner HTML of an element</td>
+            </tr>
+            <tr>
+              <td>element.attribute = new value</td>
+              <td>Change the attribute value of an HTML element</td>
+            </tr>
+            <tr>
+              <td>element.style.property = new style</td>
+              <td>Change the style of an HTML element</td>
+            </tr>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>element.setAttribute(attribute, value)</td>
+              <td>Change the attribute value of an HTML element</td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-box">
+          <h2>Adding and Deleting Elements</h2>
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>document.createElement(element)</td>
+              <td>Create an HTML element</td>
+            </tr>
+            <tr>
+              <td>document.removeChild(element)</td>
+              <td>Remove an HTML element</td>
+            </tr>
+            <tr>
+              <td>document.appendChild(element)</td>
+              <td>Add an HTML element</td>
+            </tr>
+            <tr>
+              <td>document.replaceChild(new, old)</td>
+              <td>Replace an HTML element</td>
+            </tr>
+            <tr>
+              <td>document.write(text)</td>
+              <td>Write into the HTML output stream</td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-box">
+          <h2>Adding Events Handlers</h2>
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>document.getElementById(id).onclick = function(){code}</td>
+              <td>Adding event handler code to an onclick event</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Elements">
+      <header>
+        <h1>Elements</h1>
+      </header>
+      <div class="contennt">
+        <h2>Finding HTML Elements</h2>
+        <p>Often, with JavaScript, you want to manipulate HTML elements.</p>
+        <div class="list">
+          <p>To do so, you have to find the elements first. There are several ways to do this:</p>
+          <ul>
+            <li>Finding HTML elements by id</li>
+            <li>Finding HTML elements by tag name</li>
+            <li>Finding HTML elements by class name</li>
+            <li>Finding HTML elements by CSS selectors</li>
+            <li>Finding HTML elements by HTML object collections</li>
+          </ul>
+        </div>
+        <div class="code-box">
+          <h3>Example: Finding HTML Element by Id</h3>
+          <p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
+          <p>This example finds the element with <code class="code-span">id="intro"</code>:</p>
+          <code class="code">
+            var myElement = document.getElementById("intro");
+          </code>
+          <p>If the element is found, the method will return the element as an object (in myElement).</p>
+          <p>If the element is not found, myElement will contain <code class="code-span">null</code>.</p>
+        </div>
+
+        <div class="code-box">
+          <h3>Example: Finding HTML Elements by Tag Name</h3>
+          <p>This example finds all <code class="code-span">&lt;p&gt;</code> elements:</p>
+          <code class="code">
+            var x = document.getElementsByTagName("p");
+          </code>
+          <p>This example finds the element with <code class="code-span">id="main"</code>, and then finds all <code
+              class="code-span">&lt;p&gt;</code> elements inside <code class="code-span">"main"</code>:</p>
+          <code class="code">
+            var x = document.getElementById("main");
+            var y = x.getElementsByTagName("p");
+          </code>
+        </div>
+
+        <div class="code-box">
+          <h3>Example: Finding HTML Elements by Class Name</h3>
+          <p>If you want to find all HTML elements with the same class name, use <code
+              class="code-span">getElementsByClassName()</code>.</p>
+          <p>This example returns a list of all elements with <code class="code-span">class="intro"</code>.</p>
+          <code class="code">
+            var x = document.getElementsByClassName("intro");
+          </code>
+          <p class="notice">Finding elements by class name does not work in Internet Explorer 8 and earlier versions.
+          </p>
+        </div>
+
+        <div class="code-box">
+          <h3>Example: Finding HTML Elements by CSS Selectors</h3>
+          <p>If you want to find all HTML elements that match a specified CSS selector (id, class names, types,
+            attributes, values of
+            attributes, etc), use the <code class="code-span">querySelectorAll()</code> method.</p>
+          <p>This example returns a list of all <code class="code-span">&lt;p&gt;</code> elements with <code
+              class="code-span">class="intro".</code>
+          </p>
+          <code class="code">
+            var x = document.querySelectorAll("p.intro");
+          </code>
+          <p class="notice">The querySelectorAll() method does not work in Internet Explorer 8 and earlier versions.</p>
+        </div>
+
+        <div class="code-box">
+          <h3>Example: Finding HTML Elements by HTML Object Collections</h3>
+          <p>This example finds the form element with <code class="code-span">id="frm1"</code>, in the forms collection,
+            and displays all element
+            values:</p>
+          <code class="code">
+            var x = document.forms["frm1"];
+            var text = "";
+            var i;
+            for (i = 0; i < x.length; i++) { 
+              text +=x.elements[i].value + "&lt;br&gt;"; 
+            } 
+            document.getElementById("demo").innerHTML=text;
+          </code>
+        </div>
+
+        <div class="list">
+          <p>The following HTML objects (and object collections) are also accessible:</p>
+          <ul>
+            <li>document.anchors</li>
+            <li>document.body</li>
+            <li>document.documentElement</li>
+            <li>document.embeds</li>
+            <li>document.forms</li>
+            <li>document.head</li>
+            <li>document.images</li>
+            <li>document.links</li>
+            <li>document.scripts</li>
+            <li>document.title</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="HTML">
+      <header>
+        <h1>HTML</h1>
+      </header>
+      <div class="content">
+        <h2>Changing the HTML Output Stream</h2>
+        <p>JavaScript can create dynamic HTML content:</p>
+        <p>Date: Wed Jun 03 2020 19:39:25 GMT+0800 (台北標準時間)</p>
+        <p> In JavaScript, <code class="code-span">document.write()</code> can be used to write directly to the HTML
+          output stream:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;script&gt;
+                  document.write(Date());
+                &lt;/script&gt;
+            
+              &lt;/body&gt;            
+            &lt;/html&gt;
+          </code>
+          <p class="notice">Never use <code class="code-span">document.write()</code> after the document is loaded. It
+            will overwrite the document.</p>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Changing HTML Content</h2>
+        <p>The easiest way to modify the content of an HTML element is by using the <code
+            class="code-span">innerHTML</code> property. </p>
+        <p>To change the content of an HTML element, use this syntax:</p>
+        <code class="code-area">document.getElementById(id).innerHTML = new HTML</code>
+        <p>This example changes the content of a <code class="code-span">&lt;p&gt;</code> element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;p id="p1"&gt;Hello World!&lt;/p&gt;
+            
+                &lt;script&gt;
+                  document.getElementById("p1").innerHTML = "New text!";
+                &lt;/script&gt;
+            
+              &lt;/body&gt;  
+            &lt;/html&gt;
+          </code>
+          <p>Example explained:</p>
+          <p>1. The HTML document above contains a <code class="code-span">&lt;p&gt;</code> element with <code
+              class="code-span">id="p1"</code></p>
+          <p>2. We use the HTML DOM to get the element with <code class="code-span">id="p1"</code></p>
+          <p>3. A JavaScript changes the content (<code class="code-span">innerHTML</code>) of that element to "New
+            text!"</p>
+        </div>
+        <div class="code-box">
+          <p>This example changes the content of an <code class="code-span">&lt;h1&gt;</code> element:</p>
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+             &lt;body&gt;
+            
+                &lt;h1 id="id01"&gt;Old Heading&lt;/h1&gt;
+            
+                &lt;script&gt;
+                  var element = document.getElementById("id01");
+                  element.innerHTML = "New Heading";
+                &lt;/script&gt;
+            
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+          <p>Example explained:</p>
+
+          <p>1. The HTML document above contains an <code class="code-span">&lt;h1&gt;</code> element with <code
+              class="code-span">id="id01"</code></p>
+          <p>2. We use the HTML DOM to get the element with <code class="code-span">id="id01"</code></p>
+          <p>3. A JavaScript changes the content (<code class="code-span">innerHTML</code>) of that element to "New
+            Heading"</p>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Changing the Value of an Attribute</h2>
+        <p>To change the value of an HTML attribute, use this syntax:</p>
+        <code class="code-area">document.getElementById(id).attribute = new value</code>
+        <p>This example changes the value of the src attribute of an <code class="code-span">img</code> element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+             &lt;body&gt;
+            
+                &lt;img id="myImage" src="smiley.gif"&gt;
+            
+                &lt;script&gt;
+                  document.getElementById("myImage").src = "landscape.jpg";
+                &lt;/script&gt;
+            
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+          <p>Example explained:</p>
+          <p>1. The HTML document above contains an <code class="code-span">&lt;img&gt;</code> element with <code
+              class="code-span">id="myImage"</code></p>
+          <p>2. We use the HTML DOM to get the element with <code class="code-span">id="myImage"</code></p>
+          <p>3. A JavaScript changes the <code class="code-span">src</code> attribute of that element from "smiley.gif"
+            to "landscape.jpg"</p>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="CSS">
+      <header>
+        <h1>CSS</h1>
+      </header>
+      <div class="content">
+        <h2>Changing HTML Style</h2>
+        <p>To change the style of an HTML element, use this syntax:</p>
+        <code class="coda-area">document.getElementById(id).style.property = new style</code>
+        <p>The following example changes the style of a
+          <code class="code-span">&lt;p&gt;</code> element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              &lt;html&gt;
+                &lt;body&gt;
+              
+                  &lt;p id="p2"&gt;Hello World!&lt;/p&gt;
+              
+                  &lt;script&gt;
+                    document.getElementById("p2").style.color = "blue";
+                  &lt;/script&gt;
+              
+                  &lt;p&gt;The paragraph above was changed by a script.&lt;/p&gt;
+              
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Using Events</h2>
+        <p>The HTML DOM allows you to execute code when an event occurs.</p>
+
+        <div class="list">Events are generated by the browser when "things happen" to HTML elements:
+          <ul>
+            <li>An element is clicked on</li>
+            <li>The page has loaded</li>
+            <li>Input fields are changed</li>
+          </ul>
+        </div>
+        <p>You will learn more about events in the next chapter of this tutorial.</p>
+        <p>This example changes the style of the HTML element with <code class="code-span">id="id1"</code>, when the
+          user clicks a button:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;h1 id="id1"&gt;My Heading 1&lt;/h1&gt;
+            
+                &lt;button type="button" onclick="document.getElementById('id1').style.color = 'red'"&gt;
+                Click Me!&lt;/button&gt;
+            
+              &lt;/body&gt;          
+            &lt;/html&gt;
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Animations">
+      <header>
+        <h1>Animations</h1>
+      </header>
+      <div class="content">
+        <h2>A Basic Web Page</h2>
+        <p>To demonstrate how to create HTML animations with JavaScript, we will use a simple web page:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;body&gt;
+
+              &lt;h1&gt;My First JavaScript Animation&lt;/h1&gt;
+
+              &lt;div id="animation"&gt;My animation will go here&lt;/div&gt;
+
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Create an Animation Container</h2>
+        <p>All animations should be relative to a container element.</p>
+        <code class="code">
+          &lt;div id="container"&gt;
+            &lt;div id="animate"&gt;My animation will go here&lt;/div&gt;
+          &lt;/div&gt;
+        </code>
+      </div>
+      <div class="content">
+        <h2>Style the Elements</h2>
+        <p>The container element should be created with style = "<code class="code-span">position: relative</code>".
+        </p>
+        <p>The animation element should be created with style = "<code class="code-span">position: absolute</code>".
+        </p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            #container {
+              width: 400px;
+              height: 400px;
+              position: relative;
+              background: yellow;
+            }
+            #animate {
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              background: red;
+            }
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Animation Code</h2>
+        <p>JavaScript animations are done by programming gradual changes in an element's style.</p>
+        <p>The changes are called by a timer. When the timer interval is small, the animation looks continuous.</p>
+        <p>The basic code is:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var id = setInterval(frame, 5);
+            
+            function frame() {
+              if (/* test for finished */) {
+                clearInterval(id);
+              } else {
+                /* code to change the element style */
+              }
+            }
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Create the Animation Using JavaScript</h2>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            function myMove() {
+              var elem = document.getElementById("animate");
+              var pos = 0;
+              var id = setInterval(frame, 5);
+              function frame() {
+                if (pos == 350) {
+                clearInterval(id);
+                } else {
+                  pos++;
+                  elem.style.top = pos + 'px';
+                  elem.style.left = pos + 'px';
+                }
+              }
+            }
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Events">
+      <header>
+        <h1>Events</h1>
+      </header>
+      <div class="content">
+        <h2>Reacting to Events</h2>
+        <p>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</p>
+        <p>To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:</p>
+        <code class="code-area">onclick=JavaScript</code>
+        <div class="list">
+          <p>Examples of HTML events:</p>
+          <ul>
+            <li>When a user clicks the mouse</li>
+            <li>When a web page has loaded</li>
+            <li>When an image has been loaded</li>
+            <li>When the mouse moves over an element</li>
+            <li>When an input field is changed</li>
+            <li>When an HTML form is submitted</li>
+            <li>When a user strokes a key</li>
+          </ul>
+        </div>
+        <div class="code-box">
+          <p>In this example, the content of the <code class="code-span">&lt;h1&gt;</code> element is changed when a
+            user clicks on it:</p>
+          <h3>Example</h3>
+          <code class="code">
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;body&gt;
+              
+                  &lt;h1 onclick="this.innerHTML = 'Ooops!'"&gt;Click on this text!&lt;/h1&gt;
+                  
+               &lt;/body&gt;            
+              &lt;/html&gt;
+            </code>
+        </div>
+        <div class="code-box">
+          <p>In this example, a function is called from the event handler:</p>
+          <h3>Example</h3>
+          <code class="code">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;h1 onclick="changeText(this)"&gt;Click on this text!&lt;/h1&gt;
+            
+                &lt;script&gt;
+                  function changeText(id) {
+                    id.innerHTML = "Ooops!";
+                  }
+                &lt;/script&gt;
+            
+              &lt;/body&gt;          
+            &lt;/html&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>HTML Event Attributes</h2>
+        <p>To assign events to HTML elements you can use event attributes.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Assign an onclick event to a button element:</p>
+          <code class="code">
+            &lt;button onclick="displayDate()"&gt;Try it&lt;/button&gt;
+          </code>
+          <p>In the example above, a function named displayDate will be executed when the button is clicked.</p>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Assign Events Using the HTML DOM</h2>
+        <p>The HTML DOM allows you to assign events to HTML elements using JavaScript:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Assign an onclick event to a button element:</p>
+          <code class="code">
+            &lt;script&gt;
+              document.getElementById("myBtn").onclick = displayDate;
+            &lt;/script&gt;
+          </code>
+          <p>In the example above, a function named <code class="code-span">displayDate</code> is assigned to an HTML
+            element with the <code class="code-span">id="myBtn"</code>.</p>
+          <p>The function will be executed when the button is clicked.</p>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The onload and onunload Events</h2>
+        <p>The <code class="code-span">onload</code> and <code class="code-span">onunload</code> events are triggered
+          when the user enters or leaves
+          the page. </p>
+        <p>The <code class="code-span">onload</code> event can be used to check the visitor's browser type and browser
+          version, and load the proper
+          version of the
+          web page based on the information.</p>
+        <p>The <code class="code-span">onload</code> and <code class="code-span">onunload</code> events can be used to
+          deal with cookies.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              &lt;body onload="checkCookies()"&gt;&lt;/body&gt;
+            </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The onchange Event</h2>
+        <p>The <code class="code-span">onchange</code> event is often used in combination with validation of input
+          fields.</p>
+        <p>Below is an example of how to use the onchange. The <code class="code-span">upperCase()</code> function will
+          be called when a user changes
+          the content
+          of an input field.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              &lt;input type="text" id="fname" onchange="upperCase()"&gt;
+            </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The onmouse Events</h2>
+        <div class="list">
+          <ul>
+            <li>The onmouseover event can be used to trigger a function when the user mouses over of an HTML
+              element</li>
+            <li>The onmouseout event can be used to trigger a function when the user mouses out of an HTML
+              element</li>
+            <li>The onmousedown event is all parts of a mouse-click. When a mouse-button
+              is clicked, the onmousedown event is triggered.</li>
+            <li>The onmouseup event is all parts of a mouse-click. When the mouse-button is released, the onmouseup
+              event is triggered.</li>
+            <li>The onclick event is all parts of a mouse-click. When the mouse-click is completed, the onclick event is
+              triggered.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Event_Listener">
+      <header>
+        <h1>Event Listener</h1>
+      </header>
+      <div class="content">
+        <h2>The addEventListener() method</h2>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Add an event listener that fires when a user clicks a button:</p>
+          <code class="code">
+            document.getElementById("myBtn").addEventListener("click", displayDate);
+          </code>
+          <p>The <code class="code-span">addEventListener()</code> method attaches an event handler to the specified
+            element.</p>
+          <p>The <code class="code-span">addEventListener()</code> method attaches an event handler to an element
+            without overwriting existing event
+            handlers.</p>
+          <p>You can add many event handlers to one element.</p>
+          <p>You can add many event handlers of the same type to one element, i.e two "click" events.</p>
+          <p>You can add event listeners to any DOM object not only HTML elements. i.e the window object.</p>
+          <p>The <code class="code-span">addEventListener()</code> method makes it easier to control how the event
+            reacts to bubbling.</p>
+          <p>When using the <code class="code-span">addEventListener()</code> method, the JavaScript is separated from
+            the HTML markup, for better
+            readability and
+            allows you to add event listeners even when you do not control the HTML markup.</p>
+          <p>You can easily remove an event listener by using the <code class="code-span">removeEventListener()</code>
+            method.</p>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Syntax</h2>
+        <code class="code-area">element.addEventListener(event, function, useCapture);</code>
+        <p>The first parameter is the type of the event (like "<code class="code-span">click</code>" or "<code
+            class="code-span">mousedown</code>" or any other HTML DOM Event.)</p>
+        <p>The second parameter is the function we want to call when the event occurs.</p>
+        <p>The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This
+          parameter is
+          optional.</p>
+        <p class="notice">Note that you don't use the "on" prefix for the event; use "<code
+            class="code-span">click</code>" instead of "<code class="code-span">onclick</code>".</p>
+      </div>
+      <div class="content">
+        <h2>Add an Event Handler to an Element</h2>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Alert "Hello World!" when the user clicks on an element:</p>
+          <code class="code">
+            element.addEventListener("click", function(){ alert("Hello World!"); });
+          </code>
+        </div>
+        <p>You can also refer to an external "named" function:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Alert "Hello World!" when the user clicks on an element:</p>
+          <code class="code">
+            element.addEventListener("click", myFunction);
+            
+            function myFunction() {
+              alert ("Hello World!");
+            }
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Add Many Event Handlers to the Same Element</h2>
+        <p>The <code class="code-span">addEventListener()</code> method allows you to add many events to the same
+          element, without overwriting existing events:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              element.addEventListener("click", myFunction);
+              element.addEventListener("click", mySecondFunction);
+            </code>
+        </div>
+        <p>You can add events of different types to the same element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            element.addEventListener("mouseover", myFunction);
+            element.addEventListener("click", mySecondFunction);
+            element.addEventListener("mouseout", myThirdFunction);
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Add an Event Handler to the window Object</h2>
+        <p>The <code class="code-span">addEventListener()</code> method allows you to add event listeners on any HTML
+          DOM object such as HTML elements, the HTML
+          document, the window object, or other objects that support events, like the <code
+            class="code-span">xmlHttpRequest</code> object.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <p>Add an event listener that fires when a user resizes the window:</p>
+          <code class="code">
+            window.addEventListener("resize", function(){
+              document.getElementById("demo").innerHTML = sometext;
+            });
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Passing Parameters</h2>
+        <p>When passing parameter values, use an "anonymous function" that calls the specified function with the
+          parameters:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+          element.addEventListener("click", function(){ myFunction(p1, p2); });
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Event Bubbling or Event Capturing?</h2>
+        <p>There are two ways of event propagation in the HTML DOM, bubbling and capturing.</p>
+        <p>Event propagation is a way of defining the element order when an event occurs. If you have a &lt;p&gt;
+          element inside a &lt;div&gt; element, and the user clicks on the &lt;p&gt; element, which element's "click"
+          event should be handled first?</p>
+        <p>In bubbling the inner most element's event is handled first and then the outer: the &lt;p&gt; element's click
+          event is handled first, then the &lt;div&gt; element's click event.</p>
+        <p>In capturing the outer most element's event is handled first and then the inner: the &lt;div&gt; element's
+          click event will be handled first, then the &lt;p&gt; element's click event.</p>
+        <p>With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:
+        </p>
+        <code class="code-area">addEventListener(event, function, useCapture);</code>
+        <p>The default value is false, which will use the bubbling propagation, when the value is set to true, the event
+          uses the capturing propagation.</p>
+
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            document.getElementById("myP").addEventListener("click", myFunction, true);
+            document.getElementById("myDiv").addEventListener("click", myFunction, true);
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The removeEventListener() method</h2>
+        <p>The <code class="code-span">removeEventListener()</code> method removes event handlers that have been
+          attached with the addEventListener() method:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              element.removeEventListener("mousemove", myFunction);
+            </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Browser Support</h2>
+        <p>The numbers in the table specifies the first browser version that fully supports these methods.</p>
+        <div class="table-box">
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Chrome</th>
+              <th>Internet/Edge</th>
+              <th>FireFox</th>
+              <th>Safari</th>
+              <th>Opera</th>
+            </tr>
+            <tr>
+              <td>addEventListener()</td>
+              <td>1.0</td>
+              <td>9.0</td>
+              <td>1.0</td>
+              <td>1.0</td>
+              <td>7.0</td>
+            </tr>
+            <tr>
+              <td>removeEventListener()</td>
+              <td>1.0</td>
+              <td>9.0</td>
+              <td>1.0</td>
+              <td>1.0</td>
+              <td>7.0</td>
+            </tr>
+          </table>
+          <p class="notice">The <code class="code-span">addEventListener()</code> and <code
+              class="code-span">removeEventListener()</code> methods are not supported in IE 8 and earlier versions.
+            However,
+            for these specific browser versions, you can use the <code class="code-span">attachEvent()</code> method to
+            attach an event handlers to the element,
+            and the <code class="code-span">detachEvent()</code> method to remove it:</p>
+          <code class="code-area">element.attachEvent(event, function);</code>
+          <code class="code-area">element.detachEvent(event, function);</code>
+        </div>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var x = document.getElementById("myBtn");
+            if (x.addEventListener) {   // For all major browsers, except IE 8 and earlier
+              x.addEventListener("click", myFunction);
+            } else if (x.attachEvent) {   // For IE 8 and earlier versions
+              x.attachEvent("onclick", myFunction);
+            }
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Navigation">
+      <header>
+        <h1>Navigation</h1>
+      </header>
+      <div class="content">
+        <h2>Navigating Between Nodes</h2>
+        <div class="list">
+          <p>You can use the following node properties to navigate between nodes with JavaScript:</p>
+          <ul>
+            <li>parentNode</li>
+            <li>childNodes[nodenumber]</li>
+            <li>firstChild</li>
+            <li>lastChild</li>
+            <li>nextSibling</li>
+            <li>previousSibling</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Child Nodes and Node Values</h2>
+        <p class="notice">A common error in DOM processing is to expect an element node to contain text.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;title id="demo"&gt;DOM Tutorial&lt;/title&gt;
+          </code>
+        </div>
+        <p>The element node <code class="code-span">&lt;title&gt;</code> (in the example above) does not contain text.
+        </p>
+        <p>It contains a text node with the value "DOM Tutorial".</p>
+        <p>The value of the text node can be accessed by the node's <code class="code-span">innerHTML</code> property:
+        </p>
+        <div class="code-box">
+          <code class="code">
+            var myTitle = document.getElementById("demo").innerHTML;
+          </code>
+        </div>
+        <p>Accessing the innerHTML property is the same as accessing the <code class="code-span">nodeValue</code> of the
+          first child:</p>
+        <div class="code-box">
+          <code class="code">
+            var myTitle = document.getElementById("demo").firstChild.nodeValue;
+          </code>
+        </div>
+        <p>Accessing the first child can also be done like this:</p>
+        <div class="code-box">
+          <code class="code">
+            var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+          </code>
+        </div>
+        <p>All the (3) following examples retrieves the text of an <code class="code-span">&lt;h1&gt;</code> element and
+          copies it into a <code class="code-span">&lt;p&gt;</code> element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              &lt;html&gt;
+                &lt;body&gt;
+              
+                  &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+                  &lt;p id="id02"&gt;&lt;/p&gt;
+              
+                  &lt;script&gt;
+                    document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+                  &lt;/script&gt;
+              
+                &lt;/body&gt;            
+              &lt;/html&gt;
+            </code>
+        </div>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+                &lt;p id="id02"&gt;&lt;/p&gt;
+            
+                &lt;script&gt;
+                  document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+                &lt;/script&gt;
+            
+              &lt;/body&gt;          
+            &lt;/html&gt;
+          </code>
+        </div>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+                &lt;p id="id02"&gt;Hello!&lt;/p&gt;
+            
+                &lt;script&gt;
+                  document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+                &lt;/script&gt;
+            
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>InnerHTML</h2>
+        <p>In this tutorial we use the innerHTML property to retrieve the content of an HTML element.</p>
+        <p>However, learning the other methods above is useful for understanding the tree structure and the navigation
+          of the DOM.</p>
+      </div>
+      <div class="content">
+        <h2>DOM Root Nodes</h2>
+        <p>There are two special properties that allow access to the full document:</p>
+        <p>1. document.body - The body of the document</p>
+        <p>2. document.documentElement - The full document</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;p&gt;Hello World!&lt;/p&gt;
+                &lt;div&gt;
+                  &lt;p&gt;The DOM is very useful!&lt;/p&gt;
+                  &lt;p&gt;This example demonstrates the &lt;b&gt;document.body&lt;/b&gt; property.&lt;/p&gt;
+                &lt;/div&gt;
+            
+                &lt;script&gt;
+                  alert(document.body.innerHTML);
+                &lt;/script&gt;
+            
+             &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </div>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;html&gt;
+              &lt;body&gt;
+            
+                &lt;p&gt;Hello World!&lt;/p&gt;
+                &lt;div&gt;
+                  &lt;p&gt;The DOM is very useful!&lt;/p&gt;
+                  &lt;p&gt;This example demonstrates the &lt;b&gt;document.documentElement&lt;/b&gt; property.&lt;/p&gt;
+                &lt;/div&gt;
+            
+                &lt;script&gt;
+                  alert(document.documentElement.innerHTML);
+                &lt;/script&gt;
+            
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The nodeName Property</h2>
+        <div class="list">
+          <p>The nodeName property specifies the name of a node.</p>
+          <ul>
+            <li>nodeName is read-only</li>
+            <li>nodeName of an element node is the same as the tag name</li>
+            <li>nodeName of an attribute node is the attribute name</li>
+            <li>nodeName of a text node is always #text</li>
+            <li>nodeName of the document node is always #document</li>
+          </ul>
+        </div>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+            &lt;p id="id02"&gt;&lt;/p&gt;
+            
+            &lt;script&gt;
+              document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
+            &lt;/script&gt;
+          </code>
+        </div>
+        <p class="notice"><code class="code-span">nodeName</code> always contains the uppercase tag name of an HTML
+          element.</p>
+      </div>
+      <div class="content">
+        <h2>The nodeValue Property</h2>
+        <div class="list">
+          The <code class="code-span">nodeValue</code> property specifies the value of a node.
+          <ul>
+            <li>nodeValue for element nodes is <code class="code-span">null</code></li>
+            <li>nodeValue for text nodes is the text itself</li>
+            <li>nodeValue for attribute nodes is the attribute value</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The nodeType Property</h2>
+        <p>The <code class="code-span">nodeType</code> property is read only. It returns the type of a node.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+            &lt;p id="id02"&gt;&lt;/p&gt;
+            
+            &lt;script&gt;
+              document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
+            &lt;/script&gt;
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Nodes">
+      <header>
+        <h1>Nodes</h1>
+      </header>
+      <div class="content">
+        <h2>Creating New HTML Elements (Nodes)</h2>
+        <p>To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to
+          an
+          existing element.</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;div id="div1"&gt;
+              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;script&gt;
+              var para = document.createElement("p");
+              var node = document.createTextNode("This is new.");
+              para.appendChild(node);
+
+              var element = document.getElementById("div1");
+              element.appendChild(para);
+            &lt;/script&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Creating new HTML Elements - insertBefore()</h2>
+        <p>The <code class="code-span">appendChild()</code> method in the previous example, appended the new element as
+          the last child of the parent.</p>
+        <p>If you don't want that you can use the <code class="code-span">insertBefore()</code> method:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;div id="div1"&gt;
+              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;script&gt;
+              var para = document.createElement("p");
+              var node = document.createTextNode("This is new.");
+              para.appendChild(node);
+
+              var element = document.getElementById("div1");
+              var child = document.getElementById("p1");
+              element.insertBefore(para, child);
+            &lt;/script&gt;
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Removing Existing HTML Elements</h2>
+        <p>To remove an HTML element, use the <code class="code-span">remove()</code> method:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;div&gt;
+              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;script&gt;
+              var elmnt = document.getElementById("p1");
+              elmnt.remove();
+            &lt;/script&gt;
+          </code>
+        </div>
+        <p class="notice">The <code class="code-span">remove()</code> method does not work in older browsers, see the
+          example below on how to use
+          <code class="code-span">removeChild()</code> instead.</p>
+      </div>
+      <div class="content">
+        <h2>Removing a Child Node</h2>
+        <p>For browsers that does not support the <code class="code-span">remove()</code> method, you have to find the
+          parent node to remove an element:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+              &lt;div id="div1"&gt;
+                &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+                &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+              &lt;/div&gt;
+              
+              &lt;script&gt;
+                var parent = document.getElementById("div1");
+                var child = document.getElementById("p1");
+                parent.removeChild(child);
+              &lt;/script&gt;
+            </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Replacing HTML Elements</h2>
+        <p>To replace an element to the HTML DOM, use the <code class="code-span">replaceChild()</code> method:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            &lt;div id="div1"&gt;
+              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;script&gt;
+              var para = document.createElement("p");
+              var node = document.createTextNode("This is new.");
+              para.appendChild(node);
+
+              var parent = document.getElementById("div1");
+              var child = document.getElementById("p1");
+              parent.replaceChild(para, child);
+            &lt;/script&gt;
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Collections">
+      <header>
+        <h1>Collections</h1>
+      </header>
+      <div class="content">
+        <h2>The HTMLCollection Object</h2>
+        <p>The <code class="code-span">getElementsByTagName()</code> method returns an <code
+            class="code-span">HTMLCollection</code> object. </p>
+        <p>An <code class="code-span">HTMLCollection</code> object is an array-like list (collection) of HTML elements.
+        </p>
+        <p>The following code selects all <code class="code-span">&lt;p&gt;</code> elements in a document:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var x = document.getElementsByTagName("p");
+          </code>
+          <p>The elements in the collection can be accessed by an index number.</p>
+          <p>To access the second <code class="code-span">&lt;p&gt;</code> element you can write:</p>
+          <code class="code">
+            y = x[1];
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>HTML HTMLCollection Length</h2>
+        <p>The <code class="code-span">length</code> property defines the number of elements in an <code
+            class="code-span">HTMLCollection</code>:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var myCollection = document.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML = myCollection.length;
+          </code>
+        </div>
+        <p>The <code class="code-span">length</code> property is useful when you want to loop through the elements in a
+          collection:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var myCollection = document.getElementsByTagName("p");
+            var i;
+            for (i = 0; i < myCollection.length; i++) { 
+              myCollection[i].style.color="red";
+            }
+          </code>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Node_Lists">
+      <header>
+        <h1>Node Lists</h1>
+      </header>
+      <div class="content">
+        <h2>The HTML DOM NodeList Object</h2>
+        <p>A <code class="code-span">NodeList</code> object is a list (collection) of nodes extracted from a document.
+        </p>
+        <p>A <code class="code-span">NodeList</code> object is almost the same as an HTMLCollection object.</p>
+        <p>Some (older) browsers return a NodeList object instead of an <code class="code-span">HTMLCollection</code>
+          for methods like
+          <code class="code-span">getElementsByClassName()</code>.</p>
+        <p>All browsers return a NodeList object for the property <code class="code-span">childNodes</code>.</p>
+        <p>Most browsers return a NodeList object for the method <code class="code-span">querySelectorAll()</code>.</p>
+        <p>The following code selects all
+          <code class="code-span">&lt;p&gt;</code> nodes in a document:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var myNodeList = document.querySelectorAll("p");
+          </code>
+          <p>The elements in the NodeList can be accessed by an index number.</p>
+          <p>To access the second &lt;p&gt; node you can write:</p>
+          <code class="code">
+            y = myNodeList[1];
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>HTML DOM Node List Length</h2>
+        <p>The <code class="code-span">length</code> property defines the number of nodes in a node list:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+                var myNodelist = document.querySelectorAll("p");
+                document.getElementById("demo").innerHTML = myNodelist.length;
+              </code>
+        </div>
+        <p>The length property is useful when you want to loop through the nodes in a node list:</p>
+        <div class="code-box">
+          <h3>Example</h3>
+          <code class="code">
+            var myNodelist = document.querySelectorAll("p");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) { 
+              myNodelist[i].style.backgroundColor="red" ; 
+            }
+          </code>
+        </div>
+      </div>
+      <div class="content">
+        <h2>The Difference Between an HTMLCollection and a NodeList</h2>
+        <p>An <code class="code-span">HTMLCollection</code> (previous chapter) is a collection of HTML elements.</p>
+        <p>A <code class="code-span">NodeList</code> is a collection of document nodes.</p>
+        <p>A NodeList and an HTML collection is very much the same thing.</p>
+        <p>Both an HTMLCollection object and a NodeList object is an array-like list (collection) of objects.</p>
+        <p>Both have a length property defining the number of items in the list (collection).</p>
+        <p>Both provide an index (0, 1, 2, 3, 4, ...) to access each item like an array.</p>
+        <p>HTMLCollection items can be accessed by their name, id, or index number.</p>
+        <p>NodeList items can only be accessed by their index number.</p>
+        <p>Only the NodeList object can contain attribute nodes and text nodes.</p>
+      </div>
+      <div class="notice">
+        <h2>A node list is not an array!</h2>
+        <p>A node list may look like an array, but it is not.</p>
+        <p>You can loop through the node list and refer to its nodes like an array.</p>
+        <p>However, you cannot use Array Methods, like valueOf(), push(), pop(), or join() on a node list.</p>
+      </div>
+    </section>
+    <section class="main-section" id="References">
+      <header>
+        <h1>References</h1>
+      </header>
+      <div class="content">
+        <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/js/js_htmldom.asp"
+            target="_blank">w3cschools.com</a> </p>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
