@@ -1,4 +1,4 @@
-# Build a Technical Documentation Page -
+# Build a Technical Documentation Page - JavaScript HTML DOM
 
 ## Project Point:
 
@@ -42,4 +42,4 @@ Fulfill the below user stories and get all of the tests to pass. Give it your ow
 
 - HTML
 - CSS
-- Web
+- Web reference from [w3cschool](https://www.w3schools.com/js/js_htmldom.asp)
