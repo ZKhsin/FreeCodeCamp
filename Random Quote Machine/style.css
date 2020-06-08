@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #263238;
+  font-family: "Lato", sans-serif;
+}
+
+#quote-box {
+  background: #212b30;
+  position: relative;
+  width: 600px;
+  height: 350px;
+  padding: 25px 40px;
+  box-shadow: 10px 10px 10px #000;
+}
+
+#quote-box::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 5px;
+  top: 0;
+  background: rgba(255, 217, 0, 0.1);
+  left: 10px;
+}
+
+#quote-box::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 5px;
+}
+
+#quote-box .title h1 {
+  position: relative;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #eee;
+}
+
+#quote-box .title h1::after {
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  content: "";
+  bottom: -20%;
+  left: 2px;
+  background: #ffd700;
+}
+
+#quote-box #search-box {
+  position: absolute;
+  top: 6%;
+  right: 5%;
+  height: 35px;
+  width: 200px;
+}
+
+#quote-box #search-box #search {
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  background: transparent;
+  color: #ddd;
+  border: 1px solid #263238;
+  outline: none;
+}
+
+#quote-box #search-box #search:focus {
+  border-color: #ffd700;
+}
+
+#quote-box #search-box #search::placeholder {
+  color: #ddd;
+}
+
+#quote-box #search-box i {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+
+#quote-box #search-box i:active {
+  color: #ffd700;
+}
+
+#quote-box .info {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0 30px;
+}
+
+#quote-box .info #text i {
+  color: #ffd700;
+}
+
+#quote-box .info #text i:first-child {
+  margin-right: 10px;
+}
+
+#quote-box .info #text i:last-child {
+  margin-left: 10px;
+}
+
+#quote-box .info #author {
+  margin-top: 10px;
+  align-self: flex-end;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: "Libre Baskerville", serif;
+}
+
+#quote-box .button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 85%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#quote-box .button i {
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#quote-box .button i:hover {
+  color: #ffd700;
+}
+
+#quote-box .button i:active {
+  transform: scale(0.95);
+}
+
+#quote-box .button button {
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #ffd700;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+#quote-box .button button:hover {
+  background: #ffd700;
+  color: #263238;
+}
+
+#quote-box .button button:active {
+  transform: scale(0.95);
+}
