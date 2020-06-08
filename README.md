@@ -16,6 +16,6 @@
 
 ### **Front End Libraries Projects**
 
-|    Project theme     |  My project   |         Description         |                                 Demo                                  |
-| :------------------: | :-----------: | :-------------------------: | :-------------------------------------------------------------------: |
-| Random Quote Machine | Quote Machine | Get random or search quotes | [DEMO](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine) |
+|    Project theme     |  My project   |         Description         |                                  Demo                                  |
+| :------------------: | :-----------: | :-------------------------: | :--------------------------------------------------------------------: |
+| Random Quote Machine | Quote Machine | Get random or search quotes | [DEMO](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine/) |

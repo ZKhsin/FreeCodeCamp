@@ -4,7 +4,7 @@
 
 Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
 
-- Project Demo: [Project Demo](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine)
+- Project Demo: [Project Demo](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine/)
 
 - User Story #1: I can see a wrapper element with a corresponding `id="quote-box"`.
 
