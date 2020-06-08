@@ -13,3 +13,9 @@
 |     Product Landing Page     |        Light Canteen        | Light food recommendation landing page |     [DEMO](https://free-code-camp.zkhsin.now.sh/Product%20Landing%20Page/)     |
 | Technical Documentation Page |     JavaScript HTML DOM     |   JavaScript HTML DOM Documentation    | [DEMO](https://free-code-camp.zkhsin.now.sh/Technical%20Documentation%20Page/) |
 |      Personal Protfolio      |                             |                                        |                                                                                |
+
+### **Front End Libraries Projects**
+
+|    Project theme     |  My project   |         Description         |                                 Demo                                  |
+| :------------------: | :-----------: | :-------------------------: | :-------------------------------------------------------------------: |
+| Random Quote Machine | Quote Machine | Get random or search quotes | [DEMO](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine) |
