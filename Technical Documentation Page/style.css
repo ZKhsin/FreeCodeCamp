@@ -90,9 +90,10 @@ body {
 }
 
 #main-doc {
+  width: calc(100% - 320px);
   position: absolute;
   margin-left: 300px;
-  padding: 30px 50px;
+  padding-left: 20px;
   background: #e2e8f0;
   color: #1a202c;
   font-family: "Raleway", sans-serif;
@@ -153,9 +154,7 @@ body {
 }
 
 #main-doc section .code-box {
-  margin: 20px 0 0;
-  padding: 20px 30px;
-  width: 90%;
+  width: 100%;
 }
 
 #main-doc section .code-box h3 {
@@ -195,10 +194,11 @@ body {
 #main-doc section .table-box {
   margin: 15px 0;
   padding: 0 30px;
+  overflow-x: auto;
 }
 
 #main-doc section .table-box table {
-  width: 90%;
+  width: 100%;
   border: 1px solid #1a202c;
   margin-right: 30px;
 }
@@ -210,7 +210,6 @@ body {
 }
 
 #main-doc section .table-box table tr td {
-  padding: 0 20px;
   text-align: center;
   font-size: 14px;
 }
@@ -248,7 +247,7 @@ body {
 #main-doc section .code-area {
   border: 1px solid #1a202c;
   padding: 10px;
-  margin: 0 30px;
+  margin: 10px 30px;
   font-size: 14px;
 }
 
@@ -267,8 +266,14 @@ body {
   }
 
   #main-doc {
+    box-sizing: border-box;
+    width: 100%;
     margin-left: 0;
     padding: 20px 50px;
     z-index: -1;
+  }
+
+  #main-doc section .code-box .code {
+    width: 100%;
   }
 }

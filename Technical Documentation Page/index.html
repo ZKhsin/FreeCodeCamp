@@ -82,17 +82,17 @@
             <code class="code-span">id="demo"</code>:
           </p>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;p id="demo"&gt;&lt;/p&gt;
-            
-                &lt;script&gt;
-                    document.getElementById("demo").innerHTML = "Hello World!";
-                &lt;/script&gt;
+        &lt;html&gt;
+          &lt;body&gt;
           
-              &lt;/body&gt;            
-            &lt;/html&gt;
+            &lt;p id="demo"&gt;&lt;/p&gt;
+          
+            &lt;script&gt;
+              document.getElementById("demo").innerHTML = "Hello World!";
+            &lt;/script&gt;
+        
+          &lt;/body&gt;            
+        &lt;/html&gt;
           </code>
           <p>In the example above,<code class="code-span">getElementById</code> is a method, while <code
               class="code-span">innerHTML</code> is a property.</p>
@@ -224,7 +224,7 @@
           <p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
           <p>This example finds the element with <code class="code-span">id="intro"</code>:</p>
           <code class="code">
-            var myElement = document.getElementById("intro");
+        var myElement = document.getElementById("intro");
           </code>
           <p>If the element is found, the method will return the element as an object (in myElement).</p>
           <p>If the element is not found, myElement will contain <code class="code-span">null</code>.</p>
@@ -234,13 +234,13 @@
           <h3>Example: Finding HTML Elements by Tag Name</h3>
           <p>This example finds all <code class="code-span">&lt;p&gt;</code> elements:</p>
           <code class="code">
-            var x = document.getElementsByTagName("p");
+        var x = document.getElementsByTagName("p");
           </code>
           <p>This example finds the element with <code class="code-span">id="main"</code>, and then finds all <code
               class="code-span">&lt;p&gt;</code> elements inside <code class="code-span">"main"</code>:</p>
           <code class="code">
-            var x = document.getElementById("main");
-            var y = x.getElementsByTagName("p");
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
           </code>
         </div>
 
@@ -250,7 +250,7 @@
               class="code-span">getElementsByClassName()</code>.</p>
           <p>This example returns a list of all elements with <code class="code-span">class="intro"</code>.</p>
           <code class="code">
-            var x = document.getElementsByClassName("intro");
+        var x = document.getElementsByClassName("intro");
           </code>
           <p class="notice">Finding elements by class name does not work in Internet Explorer 8 and earlier versions.
           </p>
@@ -265,7 +265,7 @@
               class="code-span">class="intro".</code>
           </p>
           <code class="code">
-            var x = document.querySelectorAll("p.intro");
+        var x = document.querySelectorAll("p.intro");
           </code>
           <p class="notice">The querySelectorAll() method does not work in Internet Explorer 8 and earlier versions.</p>
         </div>
@@ -276,13 +276,13 @@
             and displays all element
             values:</p>
           <code class="code">
-            var x = document.forms["frm1"];
-            var text = "";
-            var i;
-            for (i = 0; i < x.length; i++) { 
-              text +=x.elements[i].value + "&lt;br&gt;"; 
-            } 
-            document.getElementById("demo").innerHTML=text;
+        var x = document.forms["frm1"];
+        var text = "";
+        var i;
+        for (i = 0; i < x.length; i++) { 
+          text +=x.elements[i].value + "&lt;br&gt;"; 
+        } 
+        document.getElementById("demo").innerHTML=text;
           </code>
         </div>
 
@@ -316,16 +316,16 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;script&gt;
-                  document.write(Date());
-                &lt;/script&gt;
-            
-              &lt;/body&gt;            
-            &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;script&gt;
+              document.write(Date());
+            &lt;/script&gt;
+        
+          &lt;/body&gt;            
+        &lt;/html&gt;
           </code>
           <p class="notice">Never use <code class="code-span">document.write()</code> after the document is loaded. It
             will overwrite the document.</p>
@@ -341,17 +341,17 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;p id="p1"&gt;Hello World!&lt;/p&gt;
-            
-                &lt;script&gt;
-                  document.getElementById("p1").innerHTML = "New text!";
-                &lt;/script&gt;
-            
-              &lt;/body&gt;  
-            &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;p id="p1"&gt;Hello World!&lt;/p&gt;
+        
+            &lt;script&gt;
+              document.getElementById("p1").innerHTML = "New text!";
+            &lt;/script&gt;
+        
+          &lt;/body&gt;  
+        &lt;/html&gt;
           </code>
           <p>Example explained:</p>
           <p>1. The HTML document above contains a <code class="code-span">&lt;p&gt;</code> element with <code
@@ -364,19 +364,19 @@
           <p>This example changes the content of an <code class="code-span">&lt;h1&gt;</code> element:</p>
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-             &lt;body&gt;
-            
-                &lt;h1 id="id01"&gt;Old Heading&lt;/h1&gt;
-            
-                &lt;script&gt;
-                  var element = document.getElementById("id01");
-                  element.innerHTML = "New Heading";
-                &lt;/script&gt;
-            
-              &lt;/body&gt;
-            &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+         &lt;body&gt;
+        
+            &lt;h1 id="id01"&gt;Old Heading&lt;/h1&gt;
+        
+            &lt;script&gt;
+              var element = document.getElementById("id01");
+              element.innerHTML = "New Heading";
+            &lt;/script&gt;
+        
+          &lt;/body&gt;
+        &lt;/html&gt;
           </code>
           <p>Example explained:</p>
 
@@ -395,18 +395,18 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-             &lt;body&gt;
-            
-                &lt;img id="myImage" src="smiley.gif"&gt;
-            
-                &lt;script&gt;
-                  document.getElementById("myImage").src = "landscape.jpg";
-                &lt;/script&gt;
-            
-              &lt;/body&gt;
-            &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+         &lt;body&gt;
+        
+            &lt;img id="myImage" src="smiley.gif"&gt;
+        
+            &lt;script&gt;
+              document.getElementById("myImage").src = "landscape.jpg";
+            &lt;/script&gt;
+        
+          &lt;/body&gt;
+        &lt;/html&gt;
           </code>
           <p>Example explained:</p>
           <p>1. The HTML document above contains an <code class="code-span">&lt;img&gt;</code> element with <code
@@ -430,19 +430,19 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              &lt;html&gt;
-                &lt;body&gt;
-              
-                  &lt;p id="p2"&gt;Hello World!&lt;/p&gt;
-              
-                  &lt;script&gt;
-                    document.getElementById("p2").style.color = "blue";
-                  &lt;/script&gt;
-              
-                  &lt;p&gt;The paragraph above was changed by a script.&lt;/p&gt;
-              
-                &lt;/body&gt;
-              &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;p id="p2"&gt;Hello World!&lt;/p&gt;
+        
+            &lt;script&gt;
+              document.getElementById("p2").style.color = "blue";
+            &lt;/script&gt;
+        
+            &lt;p&gt;The paragraph above was changed by a script.&lt;/p&gt;
+        
+          &lt;/body&gt;
+        &lt;/html&gt;
             </code>
         </div>
       </div>
@@ -464,17 +464,17 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;h1 id="id1"&gt;My Heading 1&lt;/h1&gt;
-            
-                &lt;button type="button" onclick="document.getElementById('id1').style.color = 'red'"&gt;
-                Click Me!&lt;/button&gt;
-            
-              &lt;/body&gt;          
-            &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 id="id1"&gt;My Heading 1&lt;/h1&gt;
+        
+            &lt;button type="button" onclick="document.getElementById('id1').style.color = 'red'"&gt;
+            Click Me!&lt;/button&gt;
+        
+          &lt;/body&gt;          
+        &lt;/html&gt;
           </code>
         </div>
       </div>
@@ -489,16 +489,16 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;body&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
 
-              &lt;h1&gt;My First JavaScript Animation&lt;/h1&gt;
+          &lt;h1&gt;My First JavaScript Animation&lt;/h1&gt;
 
-              &lt;div id="animation"&gt;My animation will go here&lt;/div&gt;
+          &lt;div id="animation"&gt;My animation will go here&lt;/div&gt;
 
-              &lt;/body&gt;
-            &lt;/html&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
           </code>
         </div>
       </div>
@@ -520,18 +520,18 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            #container {
-              width: 400px;
-              height: 400px;
-              position: relative;
-              background: yellow;
-            }
-            #animate {
-              width: 50px;
-              height: 50px;
-              position: absolute;
-              background: red;
-            }
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background: red;
+        }
           </code>
         </div>
       </div>
@@ -543,15 +543,15 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var id = setInterval(frame, 5);
+        var id = setInterval(frame, 5);
             
-            function frame() {
-              if (/* test for finished */) {
-                clearInterval(id);
-              } else {
-                /* code to change the element style */
-              }
-            }
+        function frame() {
+          if (/* test for finished */) {
+            clearInterval(id);
+          } else {
+            /* code to change the element style */
+          }
+        }
           </code>
         </div>
       </div>
@@ -560,20 +560,20 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            function myMove() {
-              var elem = document.getElementById("animate");
-              var pos = 0;
-              var id = setInterval(frame, 5);
-              function frame() {
-                if (pos == 350) {
-                clearInterval(id);
-                } else {
-                  pos++;
-                  elem.style.top = pos + 'px';
-                  elem.style.left = pos + 'px';
-                }
-              }
+        function myMove() {
+          var elem = document.getElementById("animate");
+          var pos = 0;
+          var id = setInterval(frame, 5);
+          function frame() {
+            if (pos == 350) {
+            clearInterval(id);
+            } else {
+              pos++;
+              elem.style.top = pos + 'px';
+              elem.style.left = pos + 'px';
             }
+          }
+        }
           </code>
         </div>
       </div>
@@ -604,34 +604,34 @@
             user clicks on it:</p>
           <h3>Example</h3>
           <code class="code">
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                &lt;body&gt;
-              
-                  &lt;h1 onclick="this.innerHTML = 'Ooops!'"&gt;Click on this text!&lt;/h1&gt;
-                  
-               &lt;/body&gt;            
-              &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 onclick="this.innerHTML = 'Ooops!'"&gt;Click on this text!&lt;/h1&gt;
+            
+         &lt;/body&gt;            
+        &lt;/html&gt;
             </code>
         </div>
         <div class="code-box">
           <p>In this example, a function is called from the event handler:</p>
           <h3>Example</h3>
           <code class="code">
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;h1 onclick="changeText(this)"&gt;Click on this text!&lt;/h1&gt;
-            
-                &lt;script&gt;
-                  function changeText(id) {
-                    id.innerHTML = "Ooops!";
-                  }
-                &lt;/script&gt;
-            
-              &lt;/body&gt;          
-            &lt;/html&gt;
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 onclick="changeText(this)"&gt;Click on this text!&lt;/h1&gt;
+        
+            &lt;script&gt;
+              function changeText(id) {
+                id.innerHTML = "Ooops!";
+              }
+            &lt;/script&gt;
+        
+          &lt;/body&gt;          
+        &lt;/html&gt;
           </code>
         </div>
       </div>
@@ -642,7 +642,7 @@
           <h3>Example</h3>
           <p>Assign an onclick event to a button element:</p>
           <code class="code">
-            &lt;button onclick="displayDate()"&gt;Try it&lt;/button&gt;
+        &lt;button onclick="displayDate()"&gt;Try it&lt;/button&gt;
           </code>
           <p>In the example above, a function named displayDate will be executed when the button is clicked.</p>
         </div>
@@ -654,9 +654,9 @@
           <h3>Example</h3>
           <p>Assign an onclick event to a button element:</p>
           <code class="code">
-            &lt;script&gt;
-              document.getElementById("myBtn").onclick = displayDate;
-            &lt;/script&gt;
+        &lt;script&gt;
+          document.getElementById("myBtn").onclick = displayDate;
+        &lt;/script&gt;
           </code>
           <p>In the example above, a function named <code class="code-span">displayDate</code> is assigned to an HTML
             element with the <code class="code-span">id="myBtn"</code>.</p>
@@ -677,7 +677,7 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              &lt;body onload="checkCookies()"&gt;&lt;/body&gt;
+       &lt;body onload="checkCookies()"&gt;&lt;/body&gt;
             </code>
         </div>
       </div>
@@ -692,7 +692,7 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              &lt;input type="text" id="fname" onchange="upperCase()"&gt;
+        &lt;input type="text" id="fname" onchange="upperCase()"&gt;
             </code>
         </div>
       </div>
@@ -724,7 +724,7 @@
           <h3>Example</h3>
           <p>Add an event listener that fires when a user clicks a button:</p>
           <code class="code">
-            document.getElementById("myBtn").addEventListener("click", displayDate);
+        document.getElementById("myBtn").addEventListener("click", displayDate);
           </code>
           <p>The <code class="code-span">addEventListener()</code> method attaches an event handler to the specified
             element.</p>
@@ -762,7 +762,7 @@
           <h3>Example</h3>
           <p>Alert "Hello World!" when the user clicks on an element:</p>
           <code class="code">
-            element.addEventListener("click", function(){ alert("Hello World!"); });
+        element.addEventListener("click", function(){ alert("Hello World!"); });
           </code>
         </div>
         <p>You can also refer to an external "named" function:</p>
@@ -770,11 +770,11 @@
           <h3>Example</h3>
           <p>Alert "Hello World!" when the user clicks on an element:</p>
           <code class="code">
-            element.addEventListener("click", myFunction);
-            
-            function myFunction() {
-              alert ("Hello World!");
-            }
+        element.addEventListener("click", myFunction);
+        
+        function myFunction() {
+          alert ("Hello World!");
+        }
           </code>
         </div>
       </div>
@@ -785,17 +785,17 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              element.addEventListener("click", myFunction);
-              element.addEventListener("click", mySecondFunction);
+        element.addEventListener("click", myFunction);
+        element.addEventListener("click", mySecondFunction);
             </code>
         </div>
         <p>You can add events of different types to the same element:</p>
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            element.addEventListener("mouseover", myFunction);
-            element.addEventListener("click", mySecondFunction);
-            element.addEventListener("mouseout", myThirdFunction);
+        element.addEventListener("mouseover", myFunction);
+        element.addEventListener("click", mySecondFunction);
+        element.addEventListener("mouseout", myThirdFunction);
           </code>
         </div>
       </div>
@@ -809,9 +809,9 @@
           <h3>Example</h3>
           <p>Add an event listener that fires when a user resizes the window:</p>
           <code class="code">
-            window.addEventListener("resize", function(){
-              document.getElementById("demo").innerHTML = sometext;
-            });
+        window.addEventListener("resize", function(){
+          document.getElementById("demo").innerHTML = sometext;
+        });
           </code>
         </div>
       </div>
@@ -822,7 +822,7 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-          element.addEventListener("click", function(){ myFunction(p1, p2); });
+      element.addEventListener("click", function(){ myFunction(p1, p2); });
           </code>
         </div>
       </div>
@@ -845,8 +845,8 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            document.getElementById("myP").addEventListener("click", myFunction, true);
-            document.getElementById("myDiv").addEventListener("click", myFunction, true);
+        document.getElementById("myP").addEventListener("click", myFunction, true);
+        document.getElementById("myDiv").addEventListener("click", myFunction, true);
           </code>
         </div>
       </div>
@@ -857,7 +857,7 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              element.removeEventListener("mousemove", myFunction);
+        element.removeEventListener("mousemove", myFunction);
             </code>
         </div>
       </div>
@@ -903,12 +903,12 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var x = document.getElementById("myBtn");
-            if (x.addEventListener) {   // For all major browsers, except IE 8 and earlier
-              x.addEventListener("click", myFunction);
-            } else if (x.attachEvent) {   // For IE 8 and earlier versions
-              x.attachEvent("onclick", myFunction);
-            }
+        var x = document.getElementById("myBtn");
+        if (x.addEventListener) {   // For all major browsers, except IE 8 and earlier
+          x.addEventListener("click", myFunction);
+        } else if (x.attachEvent) {   // For IE 8 and earlier versions
+          x.attachEvent("onclick", myFunction);
+        }
           </code>
         </div>
       </div>
@@ -937,7 +937,7 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;title id="demo"&gt;DOM Tutorial&lt;/title&gt;
+        &lt;title id="demo"&gt;DOM Tutorial&lt;/title&gt;
           </code>
         </div>
         <p>The element node <code class="code-span">&lt;title&gt;</code> (in the example above) does not contain text.
@@ -947,20 +947,20 @@
         </p>
         <div class="code-box">
           <code class="code">
-            var myTitle = document.getElementById("demo").innerHTML;
+        var myTitle = document.getElementById("demo").innerHTML;
           </code>
         </div>
         <p>Accessing the innerHTML property is the same as accessing the <code class="code-span">nodeValue</code> of the
           first child:</p>
         <div class="code-box">
           <code class="code">
-            var myTitle = document.getElementById("demo").firstChild.nodeValue;
+        var myTitle = document.getElementById("demo").firstChild.nodeValue;
           </code>
         </div>
         <p>Accessing the first child can also be done like this:</p>
         <div class="code-box">
           <code class="code">
-            var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+        var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
           </code>
         </div>
         <p>All the (3) following examples retrieves the text of an <code class="code-span">&lt;h1&gt;</code> element and
@@ -968,52 +968,55 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              &lt;html&gt;
-                &lt;body&gt;
-              
-                  &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
-                  &lt;p id="id02"&gt;&lt;/p&gt;
-              
-                  &lt;script&gt;
-                    document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
-                  &lt;/script&gt;
-              
-                &lt;/body&gt;            
-              &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+            &lt;p id="id02"&gt;&lt;/p&gt;
+        
+            &lt;script&gt;
+              document.getElementById("id02").innerHTML = 
+                document.getElementById("id01").innerHTML;
+            &lt;/script&gt;
+        
+          &lt;/body&gt;            
+        &lt;/html&gt;
             </code>
         </div>
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
-                &lt;p id="id02"&gt;&lt;/p&gt;
-            
-                &lt;script&gt;
-                  document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
-                &lt;/script&gt;
-            
-              &lt;/body&gt;          
-            &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+            &lt;p id="id02"&gt;&lt;/p&gt;
+        
+            &lt;script&gt;
+              document.getElementById("id02").innerHTML = 
+                document.getElementById("id01").firstChild.nodeValue;
+            &lt;/script&gt;
+        
+          &lt;/body&gt;          
+        &lt;/html&gt;
           </code>
         </div>
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
-                &lt;p id="id02"&gt;Hello!&lt;/p&gt;
-            
-                &lt;script&gt;
-                  document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
-                &lt;/script&gt;
-            
-              &lt;/body&gt;
-            &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+            &lt;p id="id02"&gt;Hello!&lt;/p&gt;
+        
+            &lt;script&gt;
+              document.getElementById("id02").innerHTML = 
+                document.getElementById("id01").childNodes[0].nodeValue;
+            &lt;/script&gt;
+        
+          &lt;/body&gt;
+        &lt;/html&gt;
           </code>
         </div>
       </div>
@@ -1031,41 +1034,47 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;p&gt;Hello World!&lt;/p&gt;
-                &lt;div&gt;
-                  &lt;p&gt;The DOM is very useful!&lt;/p&gt;
-                  &lt;p&gt;This example demonstrates the &lt;b&gt;document.body&lt;/b&gt; property.&lt;/p&gt;
-                &lt;/div&gt;
-            
-                &lt;script&gt;
-                  alert(document.body.innerHTML);
-                &lt;/script&gt;
-            
-             &lt;/body&gt;
-            &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;p&gt;Hello World!&lt;/p&gt;
+            &lt;div&gt;
+              &lt;p&gt;The DOM is very useful!&lt;/p&gt;
+              &lt;p&gt;
+                This example demonstrates the 
+                &lt;b&gt;document.body&lt;/b&gt; property.
+              &lt;/p&gt;
+            &lt;/div&gt;
+        
+            &lt;script&gt;
+              alert(document.body.innerHTML);
+            &lt;/script&gt;
+        
+         &lt;/body&gt;
+        &lt;/html&gt;
           </code>
         </div>
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;html&gt;
-              &lt;body&gt;
-            
-                &lt;p&gt;Hello World!&lt;/p&gt;
-                &lt;div&gt;
-                  &lt;p&gt;The DOM is very useful!&lt;/p&gt;
-                  &lt;p&gt;This example demonstrates the &lt;b&gt;document.documentElement&lt;/b&gt; property.&lt;/p&gt;
-                &lt;/div&gt;
-            
-                &lt;script&gt;
-                  alert(document.documentElement.innerHTML);
-                &lt;/script&gt;
-            
-              &lt;/body&gt;
-            &lt;/html&gt;
+        &lt;html&gt;
+          &lt;body&gt;
+        
+            &lt;p&gt;Hello World!&lt;/p&gt;
+            &lt;div&gt;
+              &lt;p&gt;The DOM is very useful!&lt;/p&gt;
+              &lt;p&gt;
+                This example demonstrates the 
+                &lt;b&gt;document.documentElement&lt;/b&gt; property.
+              &lt;/p&gt;
+            &lt;/div&gt;
+        
+            &lt;script&gt;
+              alert(document.documentElement.innerHTML);
+            &lt;/script&gt;
+        
+          &lt;/body&gt;
+        &lt;/html&gt;
           </code>
         </div>
       </div>
@@ -1084,12 +1093,13 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
-            &lt;p id="id02"&gt;&lt;/p&gt;
-            
-            &lt;script&gt;
-              document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
-            &lt;/script&gt;
+        &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+        &lt;p id="id02"&gt;&lt;/p&gt;
+        
+        &lt;script&gt;
+          document.getElementById("id02").innerHTML = 
+            document.getElementById("id01").nodeName;
+        &lt;/script&gt;
           </code>
         </div>
         <p class="notice"><code class="code-span">nodeName</code> always contains the uppercase tag name of an HTML
@@ -1112,12 +1122,12 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
-            &lt;p id="id02"&gt;&lt;/p&gt;
-            
-            &lt;script&gt;
-              document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
-            &lt;/script&gt;
+        &lt;h1 id="id01"&gt;My First Page&lt;/h1&gt;
+        &lt;p id="id02"&gt;&lt;/p&gt;
+        
+        &lt;script&gt;
+          document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
+        &lt;/script&gt;
           </code>
         </div>
       </div>
@@ -1134,19 +1144,19 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;div id="div1"&gt;
-              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-            &lt;/div&gt;
-            
-            &lt;script&gt;
-              var para = document.createElement("p");
-              var node = document.createTextNode("This is new.");
-              para.appendChild(node);
+        &lt;div id="div1"&gt;
+          &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+          &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;script&gt;
+          var para = document.createElement("p");
+          var node = document.createTextNode("This is new.");
+          para.appendChild(node);
 
-              var element = document.getElementById("div1");
-              element.appendChild(para);
-            &lt;/script&gt;
+          var element = document.getElementById("div1");
+          element.appendChild(para);
+        &lt;/script&gt;
           </code>
         </div>
       </div>
@@ -1158,20 +1168,20 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;div id="div1"&gt;
-              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-            &lt;/div&gt;
-            
-            &lt;script&gt;
-              var para = document.createElement("p");
-              var node = document.createTextNode("This is new.");
-              para.appendChild(node);
-
-              var element = document.getElementById("div1");
-              var child = document.getElementById("p1");
-              element.insertBefore(para, child);
-            &lt;/script&gt;
+        &lt;div id="div1"&gt;
+          &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+          &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;script&gt;
+          var para = document.createElement("p");
+          var node = document.createTextNode("This is new.");
+          para.appendChild(node);
+  
+          var element = document.getElementById("div1");
+          var child = document.getElementById("p1");
+          element.insertBefore(para, child);
+        &lt;/script&gt;
           </code>
         </div>
       </div>
@@ -1181,15 +1191,15 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;div&gt;
-              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-            &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+          &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+        &lt;/div&gt;
             
-            &lt;script&gt;
-              var elmnt = document.getElementById("p1");
-              elmnt.remove();
-            &lt;/script&gt;
+        &lt;script&gt;
+          var elmnt = document.getElementById("p1");
+          elmnt.remove();
+        &lt;/script&gt;
           </code>
         </div>
         <p class="notice">The <code class="code-span">remove()</code> method does not work in older browsers, see the
@@ -1203,16 +1213,16 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-              &lt;div id="div1"&gt;
-                &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-                &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-              &lt;/div&gt;
+          &lt;div id="div1"&gt;
+            &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+            &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+          &lt;/div&gt;
               
-              &lt;script&gt;
-                var parent = document.getElementById("div1");
-                var child = document.getElementById("p1");
-                parent.removeChild(child);
-              &lt;/script&gt;
+          &lt;script&gt;
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p1");
+            parent.removeChild(child);
+          &lt;/script&gt;
             </code>
         </div>
       </div>
@@ -1222,20 +1232,20 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            &lt;div id="div1"&gt;
-              &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
-              &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
-            &lt;/div&gt;
+        &lt;div id="div1"&gt;
+          &lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt;
+          &lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt;
+        &lt;/div&gt;
             
-            &lt;script&gt;
-              var para = document.createElement("p");
-              var node = document.createTextNode("This is new.");
-              para.appendChild(node);
+        &lt;script&gt;
+          var para = document.createElement("p");
+          var node = document.createTextNode("This is new.");
+          para.appendChild(node);
 
-              var parent = document.getElementById("div1");
-              var child = document.getElementById("p1");
-              parent.replaceChild(para, child);
-            &lt;/script&gt;
+          var parent = document.getElementById("div1");
+          var child = document.getElementById("p1");
+          parent.replaceChild(para, child);
+        &lt;/script&gt;
           </code>
         </div>
       </div>
@@ -1254,12 +1264,12 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var x = document.getElementsByTagName("p");
+        var x = document.getElementsByTagName("p");
           </code>
           <p>The elements in the collection can be accessed by an index number.</p>
           <p>To access the second <code class="code-span">&lt;p&gt;</code> element you can write:</p>
           <code class="code">
-            y = x[1];
+        y = x[1];
           </code>
         </div>
       </div>
@@ -1270,8 +1280,8 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var myCollection = document.getElementsByTagName("p");
-            document.getElementById("demo").innerHTML = myCollection.length;
+        var myCollection = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = myCollection.length;
           </code>
         </div>
         <p>The <code class="code-span">length</code> property is useful when you want to loop through the elements in a
@@ -1279,11 +1289,11 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var myCollection = document.getElementsByTagName("p");
-            var i;
-            for (i = 0; i < myCollection.length; i++) { 
-              myCollection[i].style.color="red";
-            }
+        var myCollection = document.getElementsByTagName("p");
+        var i;
+        for (i = 0; i < myCollection.length; i++) { 
+          myCollection[i].style.color="red";
+        }
           </code>
         </div>
       </div>
@@ -1307,12 +1317,12 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var myNodeList = document.querySelectorAll("p");
+        var myNodeList = document.querySelectorAll("p");
           </code>
           <p>The elements in the NodeList can be accessed by an index number.</p>
           <p>To access the second &lt;p&gt; node you can write:</p>
           <code class="code">
-            y = myNodeList[1];
+        y = myNodeList[1];
           </code>
         </div>
       </div>
@@ -1322,19 +1332,19 @@
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-                var myNodelist = document.querySelectorAll("p");
-                document.getElementById("demo").innerHTML = myNodelist.length;
-              </code>
+        var myNodelist = document.querySelectorAll("p");
+        document.getElementById("demo").innerHTML = myNodelist.length;
+          </code>
         </div>
         <p>The length property is useful when you want to loop through the nodes in a node list:</p>
         <div class="code-box">
           <h3>Example</h3>
           <code class="code">
-            var myNodelist = document.querySelectorAll("p");
-            var i;
-            for (i = 0; i < myNodelist.length; i++) { 
-              myNodelist[i].style.backgroundColor="red" ; 
-            }
+        var myNodelist = document.querySelectorAll("p");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) { 
+          myNodelist[i].style.backgroundColor="red" ; 
+        }
           </code>
         </div>
       </div>
