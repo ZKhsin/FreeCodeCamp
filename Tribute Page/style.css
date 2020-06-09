@@ -33,7 +33,7 @@ body::before {
 }
 
 #title {
-  margin: 0 0 30px;
+  margin: 15px 0;
   font-size: 40px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -52,60 +52,59 @@ body::before {
 #img-caption p {
   position: relative;
   font-size: 20px;
-  margin: 25px 0 0;
+  margin: 15px 0 0;
 }
 
 #img-caption P:last-child {
   margin: 0 0 50px;
 }
 
-#tribute-info .info {
+#tribute-info {
+  width: 100%;
   display: flex;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.info li.saga {
+#tribute-info .info {
+  padding: 15px;
   position: relative;
-  width: 350px;
-  height: 250px;
   background: rgba(255, 255, 255, 0.4);
-  padding: 15px 5px;
   color: #000;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Piedra", cursive;
   border-radius: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
-.info .saga::before {
+#tribute-info .info:first-child {
+  margin-right: 20px;
+}
+
+#tribute-info .info p {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+#tribute-info .info::before {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   background: linear-gradient(to bottom, #0984e3 30%, #00f 80%);
-  width: 350px;
-  height: 55px;
+  width: 100%;
+  height: 60px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: -1;
 }
 
-.info li.saga:first-child {
-  margin-right: 50px;
-}
-
-.info .saga li {
-  color: #fff;
-  font-size: 16px;
-  padding-top: 10px;
+#tribute-info .info ul li {
+  padding-top: 5px;
   letter-spacing: 2px;
 }
 
-.info .saga li:first-child {
-  padding-top: 30px;
-}
-
-#tribute-info #tribute-link {
+#tribute-link {
   position: absolute;
   right: 10px;
   bottom: 0;
@@ -113,10 +112,6 @@ body::before {
 }
 
 @media (max-width: 800px) {
-  body {
-    display: block;
-  }
-
   #title {
     padding-top: 50px;
   }
@@ -133,18 +128,12 @@ body::before {
     text-align: center;
   }
 
-  #tribute-info .info {
+  #tribute-info {
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
   }
 
-  .info li.saga:first-child {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-
-  #tribute-info #tribute-link {
-    left: 0;
+  #tribute-info .info:first-child {
+    margin: 0 0 20px 0;
   }
 }
