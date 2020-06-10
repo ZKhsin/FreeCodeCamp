@@ -14,8 +14,26 @@
 | Technical Documentation Page |     JavaScript HTML DOM     |   JavaScript HTML DOM Documentation    | [DEMO](https://free-code-camp.zkhsin.now.sh/Technical%20Documentation%20Page/) |
 |      Personal Protfolio      |                             |                                        |                                                                                |
 
+---
+
+### **JavaScript Algorithms and Data Structures Projects**
+
+|       Project theme        |                                      Solution                                       |
+| :------------------------: | :---------------------------------------------------------------------------------: |
+|     Palindrome Checker     | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Palindrome%20Checker) |
+|  Roman Numeral Converter   |                                                                                     |
+|       Caesars Cipher       |                                                                                     |
+| Telephone Number Validator |                                                                                     |
+|       Cash Register        |                                                                                     |
+
+---
+
 ### **Front End Libraries Projects**
 
 |    Project theme     |  My project   |         Description         |                                  Demo                                  |
 | :------------------: | :-----------: | :-------------------------: | :--------------------------------------------------------------------: |
 | Random Quote Machine | Quote Machine | Get random or search quotes | [DEMO](https://free-code-camp.zkhsin.now.sh/Random%20Quote%20Machine/) |
+|  Markdown Previewer  |               |                             |                                                                        |
+|     Drum Machine     |               |                             |                                                                        |
+|      Calculator      |               |                             |                                                                        |
+|    Pomodoro Clock    |               |                             |                                                                        |
