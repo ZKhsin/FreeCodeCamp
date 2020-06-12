@@ -262,6 +262,7 @@ header .close {
   padding: 0 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
 }
 
 #contact {
