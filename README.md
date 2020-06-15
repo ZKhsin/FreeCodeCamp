@@ -18,13 +18,13 @@
 
 ### **JavaScript Algorithms and Data Structures Projects**
 
-|       Project theme        |                                          Solution                                          |
-| :------------------------: | :----------------------------------------------------------------------------------------: |
-|     Palindrome Checker     |    [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Palindrome%20Checker)     |
-|  Roman Numeral Converter   | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Roman%20Numeral%20Converter) |
-|       Caesars Cipher       |      [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Caesars%20Cipher)       |
-| Telephone Number Validator |                                                                                            |
-|       Cash Register        |                                                                                            |
+|       Project theme        |                                          Solution                                           |
+| :------------------------: | :-----------------------------------------------------------------------------------------: |
+|     Palindrome Checker     |     [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Palindrome%20Checker)     |
+|  Roman Numeral Converter   | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Roman%20Numeral%20Converter)  |
+|       Caesars Cipher       |       [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Caesars%20Cipher)       |
+| Telephone Number Validator | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Telephone%20Number%Validator) |
+|       Cash Register        |                                                                                             |
 
 ---
 
