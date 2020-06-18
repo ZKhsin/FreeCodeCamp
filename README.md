@@ -24,7 +24,7 @@
 |  Roman Numeral Converter   | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Roman%20Numeral%20Converter)  |
 |       Caesars Cipher       |       [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Caesars%20Cipher)       |
 | Telephone Number Validator | [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Telephone%20Number%Validator) |
-|       Cash Register        |                                                                                             |
+|       Cash Register        |       [SOLUTION](https://github.com/ZKhsin/FreeCodeCamp/tree/master/Cash%20Register)        |
 
 ---
 
